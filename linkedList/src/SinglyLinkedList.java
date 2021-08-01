@@ -2,8 +2,8 @@ public class SinglyLinkedList {
     private Node head;
 
     static class Node{
-        private int data;
-        private Node next;
+        int data;
+        Node next;
         Node(int data, Node next){
             this.data = data;
             this.next = next;
@@ -49,8 +49,6 @@ public class SinglyLinkedList {
     public static int count(SinglyLinkedList singlyLinkedList){
         if (singlyLinkedList == null || singlyLinkedList.getHead() == null)
             return 0;
-//        if (singlyLinkedList.getHead().getNext() == null)
-//            return 0;
 
         SinglyLinkedList.Node temp = singlyLinkedList.getHead();
         int count = 0;
@@ -59,6 +57,13 @@ public class SinglyLinkedList {
             temp = temp.getNext();
         }
         return count;
+    }
+
+    public static void traverseLinkedList(SinglyLinkedList.Node node){
+        while (node!=null){
+            System.out.print(node.data + " ");
+            node = node.next;
+        }
     }
 
 

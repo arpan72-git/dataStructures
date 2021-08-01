@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class MirroOfBinaryTree {
+public class MirrorOfBinaryTree {
     public static void main(String[] args) {
         BinaryTree binaryTree = new BinaryTree();
         binaryTree.setRoot(new BinaryTree.Node(1));

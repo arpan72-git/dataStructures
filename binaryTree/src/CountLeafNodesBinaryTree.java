@@ -5,7 +5,7 @@ public class CountLeafNodesBinaryTree {
     }
 
     public static int countLeafNodes(int[] array, int n, int i){
-        if (i > n ) return 0; else if(array[i] == -1) return 0;
+        if (i > n || array[i] == -1) return 0;
 
         int x = countLeafNodes(array, n,2*i);
         int y = countLeafNodes(array, n,2*i +1);

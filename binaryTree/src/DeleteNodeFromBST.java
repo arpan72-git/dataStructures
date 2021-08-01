@@ -9,7 +9,7 @@ public class DeleteNodeFromBST {
         root.right.right = new BinaryTree.Node(7);
 
         DeleteNodeFromBST d = new DeleteNodeFromBST();
-        root = d.deleteNode(root, 0);
+        root = d.deleteNode(root, 4);
         LevelOrderTraversal.levelOrder(root);
 
     }
@@ -18,11 +18,12 @@ public class DeleteNodeFromBST {
         if(root == null){
             return null;
         }
-        if(root.getData() > key)
+        if(key < root.getData())
             root.left = deleteNode(root.left, key);
-        else if(root.data < key)
+        else if(key > root.data)
             root.right = deleteNode(root.right, key);
         else{
+            // if node is a leaf node, then simply delete it by returning as null
             if(root.left == null && root.right == null){
                 return null;
             }

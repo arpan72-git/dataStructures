@@ -38,7 +38,7 @@ public class SortedLinkedListToBST {
         int[] data = {1,2,3,4,5,6,7};
         SinglyLinkedList singlyLinkedList = SinglyLinkedList.createSinglyLinkedList(data);
         head = singlyLinkedList.getHead();
-        int length = CountLengthOfLinkedList.count(singlyLinkedList);
+        int length = SinglyLinkedList.count(singlyLinkedList);
         BinaryTree.Node root = recursivelyCreateBST(length);
         System.out.println();
     }

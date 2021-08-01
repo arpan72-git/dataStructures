@@ -19,14 +19,15 @@ public class CheckBinaryTreeIsBST {
     }
 
     public boolean isBST(BinaryTree.Node node){
-        if (node != null){
-            if (!isBST(node.getLeft()))
-                return false;
-            if (prev != null && node.getData() <= prev.getData())
-                return false;
-            prev = node;
-            return isBST(node.getRight());
-        }
-        return true;
+        //every empty tree is a BST
+        if (node == null)
+            return true;
+
+        if (!isBST(node.getLeft()))
+            return false;
+        if (prev != null && node.getData() <= prev.getData())
+            return false;
+        prev = node;
+        return isBST(node.getRight());
     }
 }
